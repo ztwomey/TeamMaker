@@ -40,9 +40,20 @@ public class TeamMaker extends AppCompatActivity {
                 mNameList.setAdapter(adapter);
                 mNameField.setText("");
             }
-
-
         });
+
+        mSubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendResults();
+            }
+        });
+    }
+
+    private void sendResults() {
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putStringArrayListExtra("key",mPlayerList);
+        startActivity(intent);
     }
 
 }
