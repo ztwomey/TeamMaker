@@ -39,7 +39,7 @@ public class ResultsActivity extends AppCompatActivity {
         mCreateTeams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
     }
