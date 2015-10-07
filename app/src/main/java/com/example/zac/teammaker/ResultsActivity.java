@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ResultsActivity extends AppCompatActivity {
 
@@ -33,14 +34,23 @@ public class ResultsActivity extends AppCompatActivity {
         mTeamTwo = (ListView) findViewById(R.id.teamTwo);
 
         Intent intent = getIntent();
-        ArrayList<String> names = intent.getStringArrayListExtra("key");
+        final ArrayList<String> names = intent.getStringArrayListExtra("key");
         Log.d(TAG, names.toString());
+
+
 
         mCreateTeams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Collections.shuffle(names);
+                String number = mNumOfTeams.getText().toString();
+                int numTeams = Integer.parseInt(number);
 
+
+
+                Log.d(TAG, names.toString());
             }
+
         });
     }
 
