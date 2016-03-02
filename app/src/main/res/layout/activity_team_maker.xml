@@ -12,28 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/playerNames"
-        android:layout_above="@+id/subPlayers"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="53dp"
         android:hint="Enter player name"
-        android:maxLength="20"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit Players"
-        android:id="@+id/subPlayers"
-        android:layout_alignParentBottom="true"
+        android:maxLength="20"
+        android:layout_above="@+id/showWinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Choose Winner"
+        android:id="@+id/chooseWinner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Add Player"
         android:id="@+id/addPlayer"
-        android:layout_above="@+id/subPlayers"
+        android:layout_above="@+id/chooseWinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -41,8 +40,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nameList"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/playerNames"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/playerNames"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/showWinner"
+        android:layout_above="@+id/addPlayer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>

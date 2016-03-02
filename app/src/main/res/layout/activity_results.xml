@@ -11,41 +11,26 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Teams"
-        android:id="@+id/createTeams"
+        android:text="Choose Winner"
+        android:id="@+id/chooseWinner"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <EditText
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/showWinner"
+        android:layout_above="@+id/chooseWinner"
+        />
+
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/numOfTeams"
-        android:layout_above="@+id/createTeams"
-        android:layout_centerHorizontal="true"
-        android:hint="Number of Teams" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/contestantList"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/numOfTeams"
-        android:weightSum="100">
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/teamOne"
-            android:layout_weight="50" />
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/teamTwo"
-            android:layout_weight="50" />
-    </LinearLayout>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/showWinner"/>
 
 </RelativeLayout>
