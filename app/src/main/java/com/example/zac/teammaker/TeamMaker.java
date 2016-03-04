@@ -64,7 +64,7 @@ public class TeamMaker extends AppCompatActivity {
                 } else{
                     Random random = new Random();
                     String winner = mPlayerList.get(random.nextInt(mPlayerList.size()));
-                    mShowWinner.setText(winner);
+                    mShowWinner.setText("The winner is " + winner.toUpperCase());
                     mPlayerList.remove(winner);
                     Log.d(TAG, mPlayerList.toString());
                     adapter.notifyDataSetChanged();
