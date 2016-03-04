@@ -43,9 +43,13 @@ public class TeamMaker extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String getName = mNameField.getText().toString();
-                mPlayerList.add(getName);
-                mNameList.setAdapter(adapter);
-                mNameField.setText("");
+                if(getName.isEmpty()){
+                    Toast.makeText(TeamMaker.this, "Name field is empty. Please type a name", Toast.LENGTH_LONG).show();
+                } else {
+                    mPlayerList.add(getName);
+                    mNameList.setAdapter(adapter);
+                    mNameField.setText("");
+                }
             }
         });
 
